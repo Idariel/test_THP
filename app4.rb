@@ -1,7 +1,8 @@
 # hash = {:name => "Alice", :age => "27", :ville => "Paris"}
 # puts "#{hash[:name]} a #{hash[:age]} ans et habite #{hash[:ville]}"
 
-tableau_de_hash_emails_cp = {
+
+hash = {
   'Paris' => {
     'email' => 'toto@tata.com',
     'cp' => "75000"
@@ -24,6 +25,24 @@ tableau_de_hash_emails_cp = {
   }
 }
 
-puts tableau_de_hash_emails_cp['Paris']['email'] # sort l'email
+# puts hash['Paris']['email'] # sort l'email de Paris
 
-tableau_de_hash_emails_cp.each do 
+# # 1 pair Key/Value
+# hash.each do |key, val| #Liste des villes
+#   puts key
+# end
+
+# hash.each do |key, val| #val est un hash
+#   puts val
+# end
+
+# # 1 pair Key/Value
+# hash.each do |key, val|
+#   puts val['email']
+# end
+
+def send_email
+  hash.each do |key, val|
+    puts val['email']
+  end
+end
